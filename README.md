@@ -72,10 +72,10 @@ This one was rather fun albeit convoluted.
   
       iii.	Created a new html file called dos.html
   
-5.	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil server many times.
+5.	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil-server many times.
   <img src="dos.gif" alt="Press-This gif 3">
   
-6.	On WordPress, created a page that has a link to 192.168.10.82/dos.html
+6.	On WordPress, created a page that has a link to evil-server/dos.html
   
 7.	As an admin, click the bad link to evil-server/dos.html
   
