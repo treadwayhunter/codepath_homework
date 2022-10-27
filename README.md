@@ -43,9 +43,7 @@ Now that they can get ahold of users with ease, they can run a list of passwords
   
 2)	The comment authorizes a few html tags and attributes, allowing the potential for XSS scripting to occur if it’s not sanitized properly.
   
-3)	As admin, I entered the comment 
-  
-•	a href=”yahoo.com” onmouseover=alert(“xss”), stylized appropriately in html
+3)	As admin, I entered the comment "a href=”yahoo.com” onmouseover=alert(“xss”)", stylized appropriately in html
   
 4)	When anyone hovers over the link, the script will be executed. 
 
@@ -69,7 +67,9 @@ This one was rather fun albeit convoluted.
   
   ii.	Used the fallocate command increase the size of the foo.txt to almost 10GB
   <img src="Fallocate.gif" alt="Press-This gif 2">
+  
   iii.	Created a new html file called dos.html
+  
 5)	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil server many times.
   <img src="dos.gif" alt="Press-This gif 3">
   
