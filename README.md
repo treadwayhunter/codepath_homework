@@ -59,9 +59,9 @@ This one was rather fun albeit convoluted.
   
 3.	Installed the apache httpd service on evil-server.
   
-  i.	Used sudo apt install apache2 for the install.
+      i.	Used sudo apt install apache2 for the install.
   
-  ii.	Ensured the new http server worked.
+      ii.	Ensured the new http server worked.
   
 4.	Navigated to /var/www/html
   
