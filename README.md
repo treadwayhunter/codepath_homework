@@ -76,7 +76,7 @@ Now that they can get ahold of users with ease, they can run a list of passwords
 4.	When anyone hovers over the link, the script will be executed. 
 
 ### Comment XSS.gif
-<img src="Commment XSS.gif" alt="Comment XSS">
+<img src="Comment XSS.gif" alt="Comment XSS">
   
 <h2>**CRSF Press This DoS**</h2>
  | [!] Title: WordPress 4.2-4.7.2 - Press This CSRF DoS
