@@ -44,6 +44,7 @@ After doing some research, it turns out that every version of WordPress by defau
 •	wpscan –url <URL or IP address of server> --enumerate u
 3)	When the wpscan process is done, it will list all the users it found. In my case, the admin user, and two test users I created for the purpose of this exercise.
 
+### User Enumeration.gif
 <img src="User Enumeration.gif" alt="User Enumeration">
 Once this is complete, it is likely that it would be followed up with another command.
 •	wpscan –url <URL or IP address of server> -passwords <path to passwords.txt>
@@ -74,6 +75,7 @@ Now that they can get ahold of users with ease, they can run a list of passwords
   
 4.	When anyone hovers over the link, the script will be executed. 
 
+### Comment XSS.gif
 <img src="Commment XSS.gif" alt="Comment XSS">
   
 <h2>**CRSF Press This DoS**</h2>
@@ -100,7 +102,9 @@ Now that they can get ahold of users with ease, they can run a list of passwords
 This one was rather fun albeit convoluted.
   
 1.	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
-  <img src="Press This.gif" alt="Press-This gif 1">
+ 
+ ### Press This.gif 
+ <img src="Press This.gif" alt="Press-This gif 1">
   
 2.	Created a new Ubuntu Linux Virtual Machine “evil-server” on VirtualBox 
   
@@ -115,16 +119,21 @@ This one was rather fun albeit convoluted.
       i.	Created a new text file called foo.txt
   
       ii.	Used the fallocate command increase the size of the foo.txt to almost 10GB
+ ### Fallocate.gif
   <img src="Fallocate.gif" alt="Press-This gif 2">
   
       iii.	Created a new html file called dos.html
   
 5.	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil-server many times.
-  <img src="dos.gif" alt="Press-This gif 3">
+ 
+ ### dos.gif
+ <img src="dos.gif" alt="Press-This gif 3">
   
 6.	On WordPress, created a page that has a link to evil-server/dos.html
   
 7.	As an admin, click the bad link to evil-server/dos.html
   
 8.	Attempt to open another page to the WordPress server. It cannot open because it is dossed.
+ 
+ ### dos attack.gif
 <img src="dos attack.gif" alt="Press-This gif 4">
