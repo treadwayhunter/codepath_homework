@@ -55,13 +55,14 @@ This one was rather fun albeit convoluted.
 1.	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
   <img src="Press This.gif" alt="Press-This gif 1">
   
-2.	Created a new Ubuntu Linux Virtual Machine “evil server” on VirtualBox 
+2.	Created a new Ubuntu Linux Virtual Machine “evil-server” on VirtualBox 
   
-3.	Installed the apache httpd service.
+3.	Installed the apache httpd service on evil-server.
   
   i.	Used sudo apt install apache2 for the install.
   
   ii.	Ensured the new http server worked.
+  
 4.	Navigated to /var/www/html
   
   i.	Created a new text file called foo.txt
