@@ -4,7 +4,7 @@ See branches for assignments.
 
 Time spent: **11** hours spent in total
 
-<h3>**Homework Instructions**:</h3> 
+  <h2>**Homework Instructions**:</h2> 
 For this week's assignment, discover and demonstrate similar proofs-of-concept for at least an additional three and (up to five) exploits affecting an older version of WP.
 
 You can use any version of WP you like, though keep in mind that the WPDistillery setup will be less reliable for very old versions, and you may have to dive into the WP setup for versions much older than 4.x
@@ -25,7 +25,7 @@ For each exploit, provide the following information in the README.md:
 - A screen cap
 
 
-  <h3>User Enumeration</h3>
+  <h2>**User Enumeration**</h2>
 After doing some research, it turns out that every version of WordPress by default is susceptible to user enumeration. This can be fixed, but requires manually changing some of the source code. The wpscan tool on Kali has a built in feature specifically for user enumeration and can be used to determine if a particular WordPress setup is susceptible or not.
 
 1)	Open Kali Linux Terminal
@@ -38,7 +38,7 @@ Once this is complete, it is likely that it would be followed up with another co
 •	wpscan –url <URL or IP address of server> -passwords <path to passwords.txt>
 Now that they can get ahold of users with ease, they can run a list of passwords against each user to see if they can log in as a privileged user.
 
-  <h3>Stored XSS via Comment Editing</h3>
+  <h2>**Stored XSS via Comment Editing**</h2>
 1)	Log into WordPress as an administrator, open a page, and write a new comment.
 2)	The comment authorizes a few html tags and attributes, allowing the potential for XSS scripting to occur if it’s not sanitized properly.
 3)	As admin, I entered the comment 
@@ -47,7 +47,7 @@ Now that they can get ahold of users with ease, they can run a list of passwords
 
 <img src="Commment XSS.gif" alt="Comment XSS">
   
-  <h3>CRSF Press This Dos</h3>
+  <h2>**CRSF Press This DoS**</h2>
 This one was rather fun albeit convoluted.
 1)	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
   <img src="Press This.gif" alt="Press-This gif 1">
