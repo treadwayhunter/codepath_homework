@@ -39,29 +39,29 @@ Once this is complete, it is likely that it would be followed up with another co
 Now that they can get ahold of users with ease, they can run a list of passwords against each user to see if they can log in as a privileged user.
 
 <h2>**Stored XSS via Comment Editing**</h2>
-1)	Log into WordPress as an administrator, open a page, and write a new comment.
+1.	Log into WordPress as an administrator, open a page, and write a new comment.
   
-2)	The comment authorizes a few html tags and attributes, allowing the potential for XSS scripting to occur if it’s not sanitized properly.
+2.	The comment authorizes a few html tags and attributes, allowing the potential for XSS scripting to occur if it’s not sanitized properly.
   
-3)	As admin, I entered the comment "a href=”yahoo.com” onmouseover=alert(“xss”)", stylized appropriately in html
+3.	As admin, I entered the comment "a href=”yahoo.com” onmouseover=alert(“xss”)", stylized appropriately in html
   
-4)	When anyone hovers over the link, the script will be executed. 
+4.	When anyone hovers over the link, the script will be executed. 
 
 <img src="Commment XSS.gif" alt="Comment XSS">
   
 <h2>**CRSF Press This DoS**</h2>
 This one was rather fun albeit convoluted.
-1)	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
+1.	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
   <img src="Press This.gif" alt="Press-This gif 1">
   
-2)	Created a new Ubuntu Linux Virtual Machine “evil server” on VirtualBox 
+2.	Created a new Ubuntu Linux Virtual Machine “evil server” on VirtualBox 
   
-3)	Installed the apache httpd service.
+3.	Installed the apache httpd service.
   
   i.	Used sudo apt install apache2 for the install.
   
   ii.	Ensured the new http server worked.
-4)	Navigated to /var/www/html
+4.	Navigated to /var/www/html
   
   i.	Created a new text file called foo.txt
   
@@ -70,12 +70,12 @@ This one was rather fun albeit convoluted.
   
   iii.	Created a new html file called dos.html
   
-5)	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil server many times.
+5.	In the dos.html file, insert the command img src="http://192.168.33.10/wp-admin/press-this.php?u=http://192.168.10.82/foo.txt&url-scan-submit=Scan&a=b", stylized correctly in html, many times. This will force the press-this.php file on the WordPress server to retrieve foo.txt as an image from the evil server many times.
   <img src="dos.gif" alt="Press-This gif 3">
   
-6)	On WordPress, created a page that has a link to 192.168.10.82/dos.html
+6.	On WordPress, created a page that has a link to 192.168.10.82/dos.html
   
-7)	As an admin, click the bad link to evil-server/dos.html
+7.	As an admin, click the bad link to evil-server/dos.html
   
-8)	Attempt to open another page to the WordPress server. It cannot open because it is dossed.
+8.	Attempt to open another page to the WordPress server. It cannot open because it is dossed.
 <img src="dos attack.gif" alt="Press-This gif 4">
