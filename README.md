@@ -1,5 +1,3 @@
-See branches for assignments.
-
 # Project 7 - WordPress vs Kali
 
 Time spent: **14** hours spent in total
