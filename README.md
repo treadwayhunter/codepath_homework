@@ -4,7 +4,7 @@ See branches for assignments.
 
 Time spent: **11** hours spent in total
 
-**Homework Instructions**: 
+<h2>**Homework Instructions**:</h2> 
 For this week's assignment, discover and demonstrate similar proofs-of-concept for at least an additional three and (up to five) exploits affecting an older version of WP.
 
 You can use any version of WP you like, though keep in mind that the WPDistillery setup will be less reliable for very old versions, and you may have to dive into the WP setup for versions much older than 4.x
