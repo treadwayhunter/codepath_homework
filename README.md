@@ -51,6 +51,7 @@ Now that they can get ahold of users with ease, they can run a list of passwords
   
 <h2>**CRSF Press This DoS**</h2>
 This one was rather fun albeit convoluted.
+  
 1.	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
   <img src="Press This.gif" alt="Press-This gif 1">
   
