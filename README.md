@@ -23,6 +23,14 @@ For each exploit, provide the following information in the README.md:
 - A screen cap
 
 
+<h2>WordPress Version Info</h2>
+ [+] WordPress version 4.2 identified (Insecure, released on 2015-04-23).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://192.168.33.10/?feed=rss2, <generator>http://wordpress.org/?v=4.2</generator>
+ |  - http://192.168.33.10/?feed=comments-rss2, <generator>http://wordpress.org/?v=4.2</generator>
+ |  - http://192.168.33.10/?feed=rss2&page_id=3, <generator>http://wordpress.org/?v=4.2</generator>
+
+
 <h2>**User Enumeration**</h2>
 After doing some research, it turns out that every version of WordPress by default is susceptible to user enumeration. This can be fixed, but requires manually changing some of the source code. The wpscan tool on Kali has a built in feature specifically for user enumeration and can be used to determine if a particular WordPress setup is susceptible or not.
 
@@ -37,6 +45,14 @@ Once this is complete, it is likely that it would be followed up with another co
 Now that they can get ahold of users with ease, they can run a list of passwords against each user to see if they can log in as a privileged user.
 
 <h2>**Stored XSS via Comment Editing**</h2>
+ | [!] Title: WordPress 3.9-5.1 - Comment Cross-Site Scripting (XSS)
+ |     Fixed in: 4.2.23
+ |     References:
+ |      - https://wpscan.com/vulnerability/d150f43f-6030-4191-98b8-20ae05585936
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9787
+ |      - https://github.com/WordPress/WordPress/commit/0292de60ec78c5a44956765189403654fe4d080b
+ |      - https://wordpress.org/news/2019/03/wordpress-5-1-1-security-and-maintenance-release/
+ |      - https://blog.ripstech.com/2019/wordpress-csrf-to-rce/
 1.	Log into WordPress as an administrator, open a page, and write a new comment.
   
 2.	The comment authorizes a few html tags and attributes, allowing the potential for XSS scripting to occur if it’s not sanitized properly.
@@ -48,6 +64,16 @@ Now that they can get ahold of users with ease, they can run a list of passwords
 <img src="Commment XSS.gif" alt="Comment XSS">
   
 <h2>**CRSF Press This DoS**</h2>
+ | [!] Title: WordPress 4.2-4.7.2 - Press This CSRF DoS
+ |     Fixed in: 4.2.13
+ |     References:
+ |      - https://wpscan.com/vulnerability/003d94a5-a075-47e5-a69e-eeaf9b7a3269
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6819
+ |      - https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
+ |      - https://github.com/WordPress/WordPress/commit/263831a72d08556bc2f3a328673d95301a152829
+ |      - https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_press_this_function_allows_dos.html
+ |      - https://seclists.org/oss-sec/2017/q1/562
+ |      - https://hackerone.com/reports/153093
 This one was rather fun albeit convoluted.
   
 1.	Research the Press-This button. It acts as a quick link to publish a page, and can be done so from the browser’s bookmarks bar.
