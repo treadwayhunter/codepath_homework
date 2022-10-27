@@ -2,7 +2,7 @@ See branches for assignments.
 
 # Project 7 - WordPress vs Kali
 
-Time spent: **11** hours spent in total
+Time spent: **14** hours spent in total
 
 <h2>**Homework Instructions**:</h2> 
 For this week's assignment, discover and demonstrate similar proofs-of-concept for at least an additional three and (up to five) exploits affecting an older version of WP.
