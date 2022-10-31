@@ -32,6 +32,8 @@ Determine which color has the vulnerability.
 The site makes a slight error that gives the exploit away. Correct user names return an error in bold, and incorrect user names return the error without bold. Using the "jmonroe99" username and the "pperson" username as examples, these will leave a bold error response, whereas an invalid username such as "random" will leave a normal error response.
 <img src="Week 8 Green Enum.gif" alt="Enum">
 <h3>Cross Site Scripting</h3>
+After trying this exploit in a handful of different locations, there is an error in the green site comment section. It does not sanitize user input correctly, and users are able to execute html and javascript code in the comment section.
+Although, a lot of other classmates seem to have found it as well... just clicking the feedback button inundated my browser with javascript alerts. Some of them were creative though - one student made a script that executed every time I moved my mouse.
 <img src="Week 8 Green XSS.gif" alt="XSS">
 
 <h2>Blue Exploits</h2>
