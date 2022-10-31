@@ -27,12 +27,9 @@ Use two different web browsers (e.g., Firefox and Chrome). Let one browser be th
 
 Determine which color has the vulnerability.
 
-
-
-
-
 <h2>Green Exploits</h2>
 <h3>User Enumeration</h3>
+The site makes a slight error that gives the exploit away. Correct user names return an error in bold, and incorrect user names return the error without bold. Using the "jmonroe99" username and the "pperson" username as examples, these will leave a bold error response, whereas an invalid username such as "random" will leave a normal error response.
 <img src="Week 8 Green Enum.gif" alt="Enum">
 <h3>Cross Site Scripting</h3>
 <img src="Week 8 Green XSS.gif" alt="XSS">
@@ -48,3 +45,4 @@ Determine which color has the vulnerability.
 <img src="Week 8 Red IDOR.gif" alt="IDOR">
 <h3>Cross Site Request Forgery</h3>
 <img src="Week 8 Red CSRF.gif" alt="CSRF">
+
