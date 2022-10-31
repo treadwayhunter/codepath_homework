@@ -31,10 +31,20 @@ Determine which color has the vulnerability.
 
 
 
-
+<h2>Green Exploits</h2>
+<h3>User Enumeration</h3>
 <img src="Week 8 Green Enum.gif" alt="Enum">
+<h3>Cross Site Scripting</h3>
 <img src="Week 8 Green XSS.gif" alt="XSS">
+
+<h2>Blue Exploits</h2>
+<h3>Session Hijacking</h3>
 <img src="Week 8 Blue Hijack.gif" alt="Hijack">
+<h3>SQL Injection</h3>
 <img src="Week 8 Blue SQLi.gif" alt="SQLi">
+
+<h2>Red Exploits</h2>
+<h3>Indirect Object Reference</h3>
 <img src="Week 8 Red IDOR.gif" alt="IDOR">
+<h3>Cross Site Request Forgery</h3>
 <img src="Week 8 Red CSRF.gif" alt="CSRF">
