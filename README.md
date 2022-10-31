@@ -1,6 +1,6 @@
 # Project 8 - Pen Testing Live Targets
 
-Time spent: **6** hours spent in total
+Time spent: **7** hours spent in total
 
 <h2>**Homework Instructions**:</h2> 
 For this week's assignment, discover and demonstrate similar proofs-of-concept for at least an additional three and (up to five) exploits affecting an older version of WP.
@@ -33,18 +33,22 @@ The site makes a slight error that gives the exploit away. Correct user names re
 <img src="Week 8 Green Enum.gif" alt="Enum">
 <h3>Cross Site Scripting</h3>
 After trying this exploit in a handful of different locations, there is an error in the green site comment section. It does not sanitize user input correctly, and users are able to execute html and javascript code in the comment section.
-Although, a lot of other classmates seem to have found it as well... just clicking the feedback button inundated my browser with javascript alerts. Some of them were creative though - one student made a script that executed every time I moved my mouse.
+Although, a lot of other classmates seem to have found it as well... just clicking the feedback button inundated my browser with javascript alerts. Some of them were creative though - one classmate made a script that executed every time I moved my mouse.
 <img src="Week 8 Green XSS.gif" alt="XSS">
 
 <h2>Blue Exploits</h2>
 <h3>Session Hijacking</h3>
+The blue site never changes its session IDs. If a user is logged in at one location and their session ID gets stolen, the malicious user can then log in as the victim without having to provide login credentials. For this exercise, I went ahead and created a new user named "sesshijack". I then used the Firefox inspection tool to open the cookies for the site, and copied the session ID. I took this session ID, opened Chrome, used the inspection tool, and placed the session ID in the cookie for the site. I was then able to log in as "sesshijack" without providing credentials.
 <img src="Week 8 Blue Hijack.gif" alt="Hijack">
 <h3>SQL Injection</h3>
+Without even logging in as an admin to the site, blue is subject to SQL Injection exploits. I was able to select a salesperson and manipulate the URL. By placing a single quote ' after the id query, it resulted in saying "Database query failed." This error alone shows the potential for SQLi attacks, and a malicious hacker would know to keep trying different combinations of SQL code until they succeed.
 <img src="Week 8 Blue SQLi.gif" alt="SQLi">
 
 <h2>Red Exploits</h2>
 <h3>Indirect Object Reference</h3>
+The red site has a vulnerability in which users whose accounts were disabled or not enabled are able to be accessed using URL manipulation.
 <img src="Week 8 Red IDOR.gif" alt="IDOR">
 <h3>Cross Site Request Forgery</h3>
+From html code I constructed myself, I was able to add new countries to the site's listing, despite the fact that it was supposed to have CSRF tokens for submitting forms. Perhaps the tokens aren't being utilized correctly.
 <img src="Week 8 Red CSRF.gif" alt="CSRF">
 
