@@ -28,3 +28,13 @@ Use two different web browsers (e.g., Firefox and Chrome). Let one browser be th
 Determine which color has the vulnerability.
 
 
+
+
+
+
+<img src="Week 8 Green Enum.gif" alt="Enum">
+<img src="Week 8 Green XSS.gif" alt="XSS">
+<img src="Week 8 Blue Hijack.gif" alt="Hijack">
+<img src="Week 8 Blue SQLi.gif" alt="SQLi">
+<img src="Week 8 Red IDOR.gif" alt="IDOR">
+<img src="Week 8 Red CSRF.gif" alt="CSRF">
