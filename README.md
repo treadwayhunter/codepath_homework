@@ -21,4 +21,5 @@ For the honeypot, I left it on for a single day to find that it had been subject
 
 <h2>Database Backup</h2>
 The MHN admin machine uses MongoDB as its database. A file of session.json has been left in the repository. In the JSON, it lists the protocol used, the source IP address, a target port, and a timestamp of when the attack occurred. 
-[session.json]session.json
+
+https://github.com/treadwayhunter/codepath_homework/blob/week_9/session.json
