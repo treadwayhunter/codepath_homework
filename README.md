@@ -12,5 +12,5 @@ In this assignment, you will stand up a basic honeypot and demonstrate its effec
 
 <h2>MHN Deployment</h2>
 For this part of the assignment, I went ahead and used AWS. I am familiar with AWS, and that helped me cut down some work time. However, by taking a different route, I did run into some initial problems. The current MHN code from github is not compatible with newer versions of Ubuntu, and the oldest version of Ubuntu I could use was 18.04 Server, one of the last versions MHN is supported on.
-<img src="AWS.png" alt="AWS">
+<img src="aws.png" alt="AWS">
 
