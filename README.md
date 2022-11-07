@@ -10,5 +10,7 @@ In this assignment, you will stand up a basic honeypot and demonstrate its effec
   - A network security feature such as an IDS configured to detect and log such attacks
 - Illustration of at least one attack against the honeypot that can be detected or logged in a way that captures information about the attack or the attacker
 
-Challenge Goals:
+<h2>MHN Deployment</h2>
+For this part of the assignment, I went ahead and used AWS. I am familiar with AWS, and that helped me cut down some work time. However, by taking a different route, I did run into some initial problems. The current MHN code from github is not compatible with newer versions of Ubuntu, and the oldest version of Ubuntu I could use was 18.04 Server, one of the last versions MHN is supported on.
+<img src="AWS.png" alt="AWS">
 
