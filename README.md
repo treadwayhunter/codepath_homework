@@ -1,2 +1,2 @@
-See branches for assignments.
+Completed course. Certificate is included
 
